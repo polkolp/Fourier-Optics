@@ -1,0 +1,1 @@
+function circ=circle(n,rad);%function circ=circle(n,rad);%circle of radius rad in nxn array;ramp=(1:n)-fix(n/2)-1;f1=zeros(n,n); f2=f1; circ=f1;for k=1:n, f1(k,:)=ramp;f2(:,k)=ramp'; endr2=f1.^2+f2.^2;rad2=rad^2;circ=r2<=rad2;

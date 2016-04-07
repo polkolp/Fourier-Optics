@@ -1,0 +1,1 @@
+function show(g,fpsval)% displays scaled abs(g) gray level using matlabs's image()colormap(gray); %need *0.25 since only 64 levelsif exist('fpsval')~=1, fpsval=1;endif ndims(g)==3,	showtile(g,fpsval);else,	ga=abs(g);	gamax=max(max(ga)); scale=0.25*255*fpsval/gamax;	ga=min(scale*ga,255);	image(ga)	axis image	figure(gcf)end
